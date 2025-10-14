@@ -1,0 +1,121 @@
+:root{
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0f172a;
+  --primary: #0b69ff;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;padding:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Fira Mono', monospace;
+  color:var(--accent);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+header{
+  background:var(--card);
+  border-bottom:1px solid #e6e9ef;
+  padding:1rem 1.25rem;
+}
+.header-inner{
+  max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand h1{margin:0;font-size:1.25rem;letter-spacing:0.6px;color:var(--primary)}
+.tagline{margin:0;color:var(--muted);font-size:0.9rem}
+nav a{color:var(--muted);text-decoration:none;margin-left:1rem;font-weight:600}
+nav a.external{color:var(--primary)}
+nav a:hover{color:var(--primary)}
+
+
+main{max-width:1100px;margin:2rem auto;padding:1.25rem}
+
+.profile-section .profile-card{
+  display:flex;gap:1rem;align-items:center;background:var(--card);border:1px solid #eef2f6;padding:1rem;border-radius:var(--radius);
+}
+.avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#4f46e5);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem}
+.profile-info h2{margin:0;font-size:1.25rem}
+.avatar-img{width:84px;height:84px;border-radius:10px;display:block;object-fit:cover}
+.role{color:var(--muted);margin-top:0.25rem;margin-bottom:0.6rem}
+.contact-list{padding-left:0;margin:0;list-style:none;color:var(--muted);font-size:0.95rem}
+.contact-list a{color:var(--primary);text-decoration:none}
+
+
+.projects{margin-top:1rem}
+.projects h3{margin-bottom:0.75rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.project-card{background:var(--card);border:1px solid #eef2f6;padding:1rem;border-radius:12px}
+.project-card h4{margin:0 0 0.5rem 0}
+.button{display:inline-block;margin-top:0.5rem;padding:0.45rem 0.9rem;background:var(--primary);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+.button:hover{opacity:0.95}
+
+.project-thumb{width:100%;height:140px;border-radius:8px;object-fit:cover;margin-bottom:0.6rem;border:1px solid #e6eefb}
+.project-card p.muted{margin:0.4rem 0 0.6rem 0;color:var(--muted);font-size:0.95rem}
+.review{background:var(--card);border:1px solid #eef2f6;padding:1rem;border-radius:12px;margin-top:1rem}
+
+/* Lightbox / modal */
+.lightbox-overlay{position:fixed;inset:0;background:rgba(15,23,42,0.85);display:flex;align-items:center;justify-content:center;padding:2rem;z-index:9999;visibility:hidden;opacity:0;transition:opacity 200ms ease, visibility 200ms}
+.lightbox-overlay.open{visibility:visible;opacity:1}
+.lightbox-inner{max-width:1100px;width:100%;max-height:90vh;overflow:auto;background:transparent;display:flex;flex-direction:column;align-items:center}
+.lightbox-img{max-width:100%;max-height:70vh;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.lightbox-caption{color:#fff;margin-top:0.6rem;text-align:center}
+.lightbox-links{margin-top:0.6rem;display:flex;gap:0.6rem}
+.lightbox-links a{background:#fff;color:var(--primary);padding:0.4rem 0.7rem;border-radius:8px;text-decoration:none;font-weight:600}
+.project-caption{font-size:0.95rem;color:var(--muted);margin-top:0.4rem}
+
+/* Thumbnail overlay */
+.thumb-wrap{position:relative}
+.thumb-overlay{position:absolute;inset:0;border-radius:8px;background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.45));display:flex;flex-direction:column;justify-content:space-between;padding:0.6rem;opacity:0;transition:opacity 180ms ease}
+.thumb-wrap:hover .thumb-overlay,.thumb-wrap:focus-within .thumb-overlay{opacity:1}
+.overlay-links{display:flex;gap:0.5rem;justify-content:flex-end}
+.overlay-links a{background:rgba(255,255,255,0.95);color:var(--primary);padding:0.35rem 0.6rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem}
+.overlay-caption{color:#fff;font-size:0.95rem;text-shadow:0 1px 2px rgba(0,0,0,0.6)}
+.overlay-links a:hover{opacity:0.95}
+
+.skill-list{list-style:none;padding-left:0;margin:0.5rem 0}
+.skill-list li{padding:0.15rem 0;color:var(--accent)}
+.skill-badge{display:inline-block;background:#eef6ff;border:1px solid #e0efff;color:var(--primary);padding:0.25rem 0.5rem;border-radius:8px;margin:0.15rem;font-size:0.9rem}
+.card{background:var(--card);border:1px solid #eef2f6;padding:1rem;border-radius:12px;margin:0.6rem 0}
+.muted{color:var(--muted)}
+
+.skills-block h5{margin:0.6rem 0 0.25rem 0;color:var(--primary);font-size:0.98rem}
+.skills-block ul{margin-bottom:0.6rem}
+
+/* Skill badges / meters */
+.skill-badges{display:flex;flex-direction:column;gap:0.6rem}
+.skill-item{display:flex;flex-direction:column}
+.skill-label{font-weight:700;color:var(--accent);margin-bottom:0.25rem}
+.skill-meter{background:#eef5ff;border-radius:10px;height:10px;overflow:hidden}
+.skill-meter-fill{background:linear-gradient(90deg,var(--primary),#4f46e5);height:100%;width:40%}
+
+/* Repository metadata shown on project cards */
+.repo-meta{font-size:0.9rem;color:var(--muted);margin-top:0.5rem;display:flex;gap:0.6rem;align-items:center}
+.repo-meta .stars{font-weight:700;color:var(--primary)}
+.repo-meta .updated{color:var(--muted)}
+.repo-meta a{color:var(--primary);text-decoration:none;font-weight:600}
+.repo-badge{background:rgba(79,70,229,0.08);color:var(--primary);padding:0.18rem 0.45rem;border-radius:999px;font-size:0.82rem}
+
+footer{max-width:1100px;margin:1.5rem auto;padding:1rem;text-align:center;color:var(--muted)}
+
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .profile-card{flex-direction:column;align-items:flex-start}
+}
+
+/* Contact form styles */
+.contact-section{margin-top:1.25rem}
+.contact-card{display:grid;grid-template-columns:1fr 260px;gap:1rem}
+.contact-form{background:var(--card);border:1px solid #eef2f6;padding:1rem;border-radius:12px}
+.contact-form label{display:block;font-weight:600;margin-top:0.6rem;color:var(--accent)}
+.contact-form input,.contact-form textarea{width:100%;padding:0.5rem;border:1px solid #dfe6ef;border-radius:8px;margin-top:0.4rem;font-size:0.95rem}
+.contact-form .button{margin-top:0.8rem}
+.contact-note{background:#fafafa;border:1px solid #f0f3f6;padding:1rem;border-radius:12px;color:var(--muted);font-size:0.95rem}
+.form-status{margin-top:0.6rem;color:var(--muted);font-size:0.95rem}
+
+@media (max-width:880px){
+  .contact-card{grid-template-columns:1fr}
+}

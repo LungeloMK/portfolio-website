@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LungeloMK - Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>LungeloMK</h1>
+        <p class="tagline">Software developer • Frontend &amp; Tools</p>
+      </div>
+      <nav>
+        <a href="profile.html">Profile</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/LungeloMK" class="external" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="profile" class="profile-section">
+      <div class="profile-card">
+        <div class="avatar">
+          <img src="assets/avatar.png" alt="LungeloMK avatar" class="avatar-img">
+        </div>
+        <div class="profile-info">
+          <h2>Lungelo MK</h2>
+          <p class="role">Full‑stack developer focused on clean frontend, tooling, and developer experience.</p>
+          <p>
+            I build maintainable web apps with a focus on performance and accessibility. I enjoy turning
+            complex problems into simple, reliable solutions.
+          </p>
+          <ul class="contact-list">
+            <li>Email: <a href="mkgithubcom@gmail.com">mkgithubcom@gmail.com</a></li>
+            <li>Location: Polokwane, South Africa</li>
+            <li><a href="https://github.com/LungeloMK">GitHub</a> • <a href="https://www.linkedin.com/in/khethelo-mafuleka-0b5196242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h3>Contact</h3>
+      <div class="contact-card">
+  <form id="contact-form" class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="button">Send message</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h3>Featured projects</h3>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="thumb-wrap" tabindex="0">
+            <img loading="lazy" class="project-thumb" src="assets/proj-cleanslate.png" alt="Clean Slate site screenshot" data-live="https://cleanslatesolutions.co.za/" data-caption="Clean Slate Solutions — booking & contact flows" data-repo="https://github.com/LungeloMK/clean-slate-login">
+            <div class="thumb-overlay">
+              <div class="overlay-caption">Clean Slate Solutions</div>
+              <div class="overlay-links"><a aria-label="Open Clean Slate live site" href="https://cleanslatesolutions.co.za/" target="_blank" rel="noopener">Live</a><a aria-label="Open Clean Slate repository on GitHub" href="https://github.com/LungeloMK/clean-slate-login" target="_blank" rel="noopener">Repo</a></div>
+            </div>
+          </div>
+          <h4>Clean Slate Solutions</h4>
+          <p>Professional cleaning service website — booking and contact flows.</p>
+          <div class="repo-meta">⭐ <span class="stars">0</span> • <span class="updated">—</span> <a href="docs/clean-slate-case-study.html">Case study</a></div>
+          <a href="https://cleanslatesolutions.co.za/" class="button" target="_blank" rel="noopener">Visit site</a>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb-wrap" tabindex="0">
+            <img loading="lazy" class="project-thumb" src="assets/proj-devworkflow.png" alt="Dev Workflow Tools screenshot" data-live="https://devworkflowtools.com/" data-caption="Dev Workflow Tools — developer resources" data-repo="">
+            <div class="thumb-overlay">
+              <div class="overlay-caption">Dev Workflow Tools</div>
+              <div class="overlay-links"><a aria-label="Open Dev Workflow Tools live site" href="https://devworkflowtools.com/" target="_blank" rel="noopener">Live</a></div>
+            </div>
+          </div>
+          <h4>Dev Workflow Tools</h4>
+          <p>Developer tooling and workflow resources site.</p>
+          <div class="repo-meta">⭐ <span class="stars">0</span> • <span class="updated">—</span> <a href="docs/dev-workflow-case-study.html">Case study</a></div>
+          <a href="https://devworkflowtools.com/" class="button" target="_blank" rel="noopener">Visit site</a>
+        </article>
+      </div>
+      <p style="text-align:center;margin-top:0.8rem"><a href="projects.html" class="button">See all projects</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 LungeloMK — Thanks for visiting.</p>
+  </footer>
+  <script>window.GITHUB_USERNAME = 'LungeloMK';</script>
+  <script>window.FORMSPREE_ENDPOINT = 'https://formspree.io/f/xblzpeqo';</script>
+  <script src="scripts/contact.js" defer></script>
+  <script src="scripts/lightbox.js" defer></script>
+</body>
+</html>

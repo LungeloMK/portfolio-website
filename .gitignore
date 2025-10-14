@@ -1,0 +1,54 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.*
+
+# Lockfiles
+package-lock.json
+yarn.lock
+
+# Images / build artifacts (if you generate optimized variants locally)
+assets/*-1200.png
+assets/*.webp
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Build
+/dist
+/build
+
+# Image optimization outputs
+/assets/*-1200.png
+/assets/*.webp
